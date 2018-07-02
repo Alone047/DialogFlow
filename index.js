@@ -16,7 +16,7 @@ restService.use(bodyParser.json());
 restService.post("/echo", function(req, res) {
   var Date = req.body.result &&req.body.result.parameters && req.body.result.parameters.Date;
   var Company = req.body.result &&req.body.result.parameters && req.body.result.parameters.Company;
-  var speech = "นี้คือข้อมูลของบริษัท $Company ณ วันที่ $Date";
+  var speech = "นี้คือข้อมูลของบริษัท "+Company+" ณ วันที่ "+Date;
   return res.json({
     speech: speech,
     displayText: speech,
