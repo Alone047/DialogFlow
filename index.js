@@ -14,8 +14,8 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  //var Date = req.body.result.parameters.Date;
-  //var Company = req.body.result.parameters.Company;
+  var Date = req.body.result.parameters.Date;
+  var Company = req.body.result.parameters.Company;
   var speech =
     req.body.result &&
     req.body.result.parameters &&
