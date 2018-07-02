@@ -25,7 +25,7 @@ restService.post("/echo", function(req, res) {
   {
     speech= "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
   }*/
-  speech = company + iDate ;
+  speech = datecurr ;
   return res.json({
     speech: speech,
     displayText: speech,
