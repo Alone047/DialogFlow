@@ -18,13 +18,14 @@ restService.post("/echo", function(req, res) {
   var iDate = req.body.result &&req.body.result.parameters && req.body.result.parameters.iDate;
   var company = req.body.result &&req.body.result.parameters && req.body.result.parameters.company;
   var speech
-  if(iDate > currdt )
+  /*if(iDate > currdt )
   {
     speech = "กรุณารุะบุวันที่ที่เป็นไปได้ด้วยค่ะ";
   }else
   {
     speech= "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
-  }
+  }*/
+  speech = datecurr +"     "+ iDate;
   return res.json({
     speech: speech,
     displayText: speech,
