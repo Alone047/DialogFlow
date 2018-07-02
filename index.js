@@ -14,10 +14,18 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var currdt = new Date();
+  //var currdt = new Date();
   var Date = req.body.result &&req.body.result.parameters && req.body.result.parameters.Date;
   var Company = req.body.result &&req.body.result.parameters && req.body.result.parameters.Company;
-  var speech= "currdt";
+  var speech
+  /*if(Date > currdt)
+  {
+    speech = "กรุณารุะบุวันที่ที่เป็นไปได้ด้วยค่ะ";
+  }else
+  {
+    speech= "นี้คือข้อมูลของบริษัท "+Company+" ณ วันที่ "+Date;
+  }*/
+  speech = Company + Date ;
   return res.json({
     speech: speech,
     displayText: speech,
