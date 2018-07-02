@@ -17,8 +17,7 @@ restService.post("/echo", function(req, res) {
   var currdt = new Date();
   var Date = req.body.result &&req.body.result.parameters && req.body.result.parameters.Date;
   var Company = req.body.result &&req.body.result.parameters && req.body.result.parameters.Company;
-  var speech; 
-  speech = "currdt";
+  var speech= "currdt";
   return res.json({
     speech: speech,
     displayText: speech,
