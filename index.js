@@ -14,7 +14,7 @@ restService.use(
 restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
-  var datecurr = new Date();
+  //var datecurr = new Date();
   var iDate = req.body.result &&req.body.result.parameters && req.body.result.parameters.iDate;
   var company = req.body.result &&req.body.result.parameters && req.body.result.parameters.company;
   var speech
@@ -25,7 +25,7 @@ restService.post("/echo", function(req, res) {
   {
     speech= "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
   }*/
-  speech = datecurr +"     "+ iDate;
+  speech = "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
   return res.json({
     speech: speech,
     displayText: speech,
