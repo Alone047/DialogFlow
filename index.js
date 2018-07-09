@@ -17,7 +17,8 @@ restService.post("/echo", function(req, res) {
   //var datecurr = new Date();
   var iDate = req.body.queryResult &&req.body.queryResult.parameters && req.body.queryResult.parameters.iDate;
   var company = req.body.queryResult &&req.body.queryResult.parameters && req.body.queryResult.parameters.company;
-  var speech
+  var speech;
+  dateFormat(iDate, "dd-mm-yyyy");
   /*if(iDate > currdt )
   {
     speech = "กรุณารุะบุวันที่ที่เป็นไปได้ด้วยค่ะ";
