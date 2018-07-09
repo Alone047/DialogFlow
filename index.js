@@ -15,8 +15,8 @@ restService.use(bodyParser.json());
 
 restService.post("/echo", function(req, res) {
   //var datecurr = new Date();
-  var iDate = req.body.result &&req.body.result.parameters && req.body.result.parameters.iDate;
-  var company = req.body.result &&req.body.result.parameters && req.body.result.parameters.company;
+  var iDate = req.body.queryResult &&req.body.queryResult.parameters && req.body.queryResult.parameters.iDate;
+  var company = req.body.queryResult &&req.body.queryResult.parameters && req.body.queryResult.parameters.company;
   var speech
   /*if(iDate > currdt )
   {
@@ -27,11 +27,30 @@ restService.post("/echo", function(req, res) {
   }*/
   speech = "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
   return res.json({
+    fulfillmentText: speech,
+    source: "webhook-echo-sample"
+  });
+});
+
+/*restService.post("/echo", function(req, res) {
+  //var datecurr = new Date();
+  var iDate = req.body.result &&req.body.result.parameters && req.body.result.parameters.iDate;
+  var company = req.body.result &&req.body.result.parameters && req.body.result.parameters.company;
+  var speech
+  /*if(iDate > currdt )
+  {
+    speech = "กรุณารุะบุวันที่ที่เป็นไปได้ด้วยค่ะ";
+  }else
+  {
+    speech= "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
+  }
+  speech = "นี้คือข้อมูลของบริษัท "+company+" ณ วันที่ "+iDate;
+  return res.json({
     speech: speech,
     displayText: speech,
     source: "webhook-echo-sample"
   });
-});
+});*/
 
 restService.post("/audio", function(req, res) {
   var speech = "";
