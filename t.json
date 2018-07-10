@@ -1,0 +1,52 @@
+{
+  "responseId": "8122256a-3c4e-496c-8af4-85dc097b7b99",
+  "queryResult": {
+    "queryText": "วันนี้ กศน",
+    "parameters": {
+      "iDate": "2018-07-08T12:00:00+00:00",
+      "company": "กศน"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "outputContexts": [
+      {
+        "name": "projects/some-db639/agent/sessions/b4a1b80d-ec66-2085-45b4-080c2b189439/contexts/return",
+        "lifespanCount": 5,
+        "parameters": {
+          "company.original": "กศน",
+          "iDate.original": "วันนี้",
+          "company": "กศน",
+          "iDate": "2018-07-09T12:00:00+00:00"
+        }
+      },
+      {
+        "name": "projects/some-db639/agent/sessions/b4a1b80d-ec66-2085-45b4-080c2b189439/contexts/date",
+        "lifespanCount": 2,
+        "parameters": {
+          "company.original": "กศน",
+          "iDate.original": "วันนี้",
+          "company": "กศน",
+          "iDate": "2018-07-09T12:00:00+00:00"
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/some-db639/agent/intents/32e7758b-65a2-4ee3-8511-b1db54a7d492",
+      "displayName": "Date"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "th"
+  },
+  "originalDetectIntentRequest": {
+    "payload": {}
+  },
+  "session": "projects/some-db639/agent/sessions/b4a1b80d-ec66-2085-45b4-080c2b189439"
+}
